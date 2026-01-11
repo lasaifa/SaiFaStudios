@@ -3,14 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SAI FA STUDIO — Instructional Design & Learning Systems</title>
-  <meta name="description" content="SAI FA STUDIO builds eLearning, online training and LMS/SMS transitions for purpose-led organisations — trauma-informed, culturally responsive, and rigorous." />
+  <title>STUDIO KYND — Giving shape to learning</title>
+  <meta name="description" content="STUDIO KYND designs inclusive, compliant, and adaptive learning experiences — from eLearning to ASQA-aligned training solutions — turning complex knowledge into clarity and impact." />
   <meta name="theme-color" content="#ffffff" />
-
-  <!-- Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -18,111 +13,88 @@
       --ink:#0b0f14;
       --muted:rgba(11,15,20,.62);
       --line:rgba(11,15,20,.12);
+      --soft:rgba(11,15,20,.05);
 
-      --accent:#5eead4;
-      --accent2:#7c3aed;
-      --accent3:#ff6b6b;
-
+      /* ONE accent colour (your blue) */
+      --blue:#0B43FF; /* adjust if you want it slightly darker/lighter */
       --radius:22px;
-      --max:1140px;
-      --gutter:22px;
+      --max:1120px;
 
-      --sans: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      --serif: "Instrument Serif", ui-serif, Georgia, serif;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
-      --shadow: 0 22px 60px rgba(0,0,0,.10);
-
-      --space-2: 14px;
-      --space-3: 18px;
-      --space-4: 24px;
-      --space-5: 34px;
-      --space-6: 48px;
-      --space-7: 72px;
     }
 
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{
       margin:0;
       font-family:var(--sans);
       color:var(--ink);
       background: var(--bg);
-      line-height:1.55;
+      line-height:1.5;
       overflow-x:hidden;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: geometricPrecision;
     }
 
+    /* Subtle grain + blue aura (no images) */
     body:before{
       content:"";
       position:fixed; inset:0;
       pointer-events:none;
       background:
-        radial-gradient(circle at 18% 10%, rgba(124,58,237,.06), transparent 35%),
-        radial-gradient(circle at 86% 18%, rgba(94,234,212,.08), transparent 42%),
-        radial-gradient(circle at 30% 88%, rgba(255,107,107,.05), transparent 42%),
+        radial-gradient(circle at 18% 12%, rgba(11,67,255,.10), transparent 38%),
+        radial-gradient(circle at 82% 22%, rgba(11,67,255,.06), transparent 44%),
+        radial-gradient(circle at 35% 88%, rgba(11,67,255,.05), transparent 46%),
         repeating-linear-gradient(
           0deg,
-          rgba(0,0,0,.016),
-          rgba(0,0,0,.016) 1px,
+          rgba(0,0,0,.02),
+          rgba(0,0,0,.02) 1px,
           transparent 1px,
           transparent 3px
         );
       mix-blend-mode:multiply;
-      opacity:.34;
+      opacity:.30;
     }
 
     a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--gutter);}
-    .rule{height:1px; background:var(--line); margin:var(--space-6) 0;}
-
-    /* Top bar */
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 22px;}
     .topbar{
       position:sticky; top:0; z-index:50;
-      background: rgba(255,255,255,.78);
-      backdrop-filter: blur(14px);
+      background: rgba(255,255,255,.72);
+      backdrop-filter: blur(12px);
       border-bottom:1px solid var(--line);
     }
     .nav{
       display:flex; align-items:center; justify-content:space-between;
       padding:16px 0;
-      gap:14px;
+      gap:16px;
     }
 
     .brand{
-      display:flex; align-items:center; gap:12px;
+      display:flex; align-items:baseline; gap:14px;
       text-decoration:none;
       white-space:nowrap;
     }
-    .logo{
-      width:40px; height:40px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      background: linear-gradient(135deg, rgba(124,58,237,.10), rgba(94,234,212,.10));
-      box-shadow: 0 18px 50px rgba(0,0,0,.08);
-      display:grid; place-items:center;
-      overflow:hidden;
-      flex: 0 0 auto;
+    .brand .name{
+      font-weight:850;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+      font-size:14px;
     }
-    .brandtext{display:flex; flex-direction:column; gap:2px; line-height:1.1}
-    .brandtext .name{
-      font-weight:800; letter-spacing:.9px;
-      text-transform:uppercase; font-size:13px;
-    }
-    .brandtext .meta{
+    .brand .meta{
       font-family:var(--mono);
-      font-size:11px;
+      font-size:12px;
       color:var(--muted);
     }
 
     .links{
-      display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; align-items:center;
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; align-items:center;
     }
     .links a{
       text-decoration:none;
       color:var(--muted);
       font-size:13px;
-      padding:9px 12px;
+      padding:10px 12px;
       border-radius:999px;
       border:1px solid transparent;
     }
@@ -132,26 +104,23 @@
       background:rgba(11,15,20,.03);
     }
     .pill{
-      border:1px solid var(--line) !important;
+      border:1px solid rgba(11,67,255,.22) !important;
       color:var(--ink) !important;
-      background:rgba(11,15,20,.02);
-    }
-    @media (max-width: 720px){
-      .links a:not(.pill){display:none;}
-      .brandtext .meta{display:none;}
+      background:rgba(11,67,255,.06);
     }
 
-    /* HERO */
-    .hero{padding: var(--space-7) 0 var(--space-6);}
+    /* Hero */
+    .hero{
+      padding:72px 0 40px;
+    }
     .heroGrid{
       display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: var(--space-5);
-      align-items:stretch;
+      grid-template-columns: 1.2fr .8fr;
+      gap:26px;
+      align-items:start;
     }
     @media (max-width: 980px){
-      .hero{padding: 56px 0 40px;}
-      .heroGrid{grid-template-columns:1fr; gap:16px;}
+      .heroGrid{grid-template-columns:1fr; gap:18px;}
     }
 
     .kicker{
@@ -167,32 +136,32 @@
     }
     .kdot{
       width:8px; height:8px; border-radius:99px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 0 0 6px rgba(94,234,212,.18);
+      background: var(--blue);
+      box-shadow: 0 0 0 6px rgba(11,67,255,.14);
     }
 
     h1{
       font-family:var(--serif);
-      font-weight:400;
-      letter-spacing:-1px;
+      font-weight:700;
+      letter-spacing:-.8px;
       line-height:1.02;
-      margin: var(--space-3) 0 var(--space-3);
-      font-size: clamp(44px, 5.4vw, 76px);
-      max-width: 17ch;
+      margin:18px 0 14px;
+      font-size: clamp(40px, 5.2vw, 68px);
     }
     .lead{
       color:var(--muted);
       font-size:16px;
-      max-width: 64ch;
-      margin: 0 0 var(--space-3);
+      max-width: 68ch;
+      margin: 0 0 18px;
     }
     .lead b{color:var(--ink)}
-    .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top: var(--space-3)}
+
+    .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
     .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      display:inline-flex; align-items:center; justify-content:center;
       text-decoration:none;
       font-size:13px;
-      font-weight:700;
+      font-weight:750;
       padding:12px 14px;
       border-radius:999px;
       border:1px solid var(--line);
@@ -200,174 +169,100 @@
     }
     .btn:hover{background: rgba(11,15,20,.04)}
     .btn.primary{
-      border-color: rgba(124,58,237,.25);
-      background: linear-gradient(135deg, rgba(124,58,237,.10), rgba(94,234,212,.10));
+      border-color: rgba(11,67,255,.28);
+      background: linear-gradient(135deg, rgba(11,67,255,.12), rgba(11,67,255,.05));
     }
-    .note{margin-top: var(--space-3); font-size:12px; color:var(--muted)}
+    .btn.primary:hover{border-color: rgba(11,67,255,.40)}
 
-    /* Visual card */
-    .visual{
-      border:1px solid var(--line);
-      border-radius: calc(var(--radius) + 6px);
-      background: rgba(255,255,255,.62);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-      min-height: 520px;
-    }
-    .visualTop{padding:14px 14px 0 14px; display:flex; gap:10px; flex-wrap:wrap}
-    .chip{
-      font-family:var(--mono);
-      font-size:11px;
-      color:rgba(11,15,20,.75);
-      border:1px solid var(--line);
-      background: rgba(11,15,20,.02);
-      padding:6px 10px;
-      border-radius:999px;
-      display:inline-flex; align-items:center; gap:8px;
-    }
-    .imgWrap{padding:14px; display:flex; flex-direction:column; gap:12px; flex:1}
-    .img{
-      width:100%;
-      border-radius: calc(var(--radius) + 2px);
-      border:1px solid var(--line);
-      overflow:hidden;
-      background: rgba(11,15,20,.03);
-      position:relative;
-      height: 320px;
-    }
-    .img img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(.95) contrast(1.02)}
-    .img:after{
-      content:"";
-      position:absolute; inset:0;
-      background: linear-gradient(180deg, transparent 55%, rgba(11,15,20,.16));
-      pointer-events:none;
-    }
-    .caption{
-      color:var(--muted);
+    .note{
+      margin-top:16px;
       font-size:12px;
-      font-family:var(--mono);
-      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      color:var(--muted);
     }
 
-    .quote{
-      border:1px dashed rgba(11,15,20,.22);
-      border-radius: var(--radius);
-      padding:16px;
-      background: rgba(255,255,255,.65);
-      color:rgba(11,15,20,.72);
-    }
-    .quote b{color:var(--ink)}
-    .quote .by{display:block; margin-top:10px; font-size:12px; color:var(--muted); font-family:var(--mono)}
-
-    /* SECTIONS */
-    section{padding: var(--space-7) 0;}
-    @media (max-width: 980px){ section{padding: 54px 0;} }
-
-    .sectionHead{display:grid; gap:8px; margin-bottom: var(--space-4);}
-    .sectionHead h2{
-      margin:0;
-      font-family:var(--serif);
-      font-weight:400;
-      font-size: clamp(26px, 2.8vw, 38px);
-      letter-spacing:-.5px;
-    }
-    .sectionHead p{margin:0; color:var(--muted); max-width: 74ch; font-size:14px;}
-
+    /* Side card */
     .card{
       border:1px solid var(--line);
       border-radius: var(--radius);
-      background: rgba(11,15,20,.02);
-      padding:18px;
+      background: rgba(255,255,255,.55);
+      padding:16px;
     }
     .card h3{
       margin:0 0 10px;
+      font-size:13px;
+      letter-spacing:.2px;
+      text-transform:uppercase;
+    }
+    .card p{margin:0 0 12px; color:var(--muted); font-size:14px}
+
+    .mini{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+      margin-top:10px;
+    }
+    .miniBox{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:12px;
+      background: rgba(11,15,20,.02);
+    }
+    .miniBox b{display:block; font-size:14px}
+    .miniBox span{display:block; margin-top:4px; font-size:12px; color:var(--muted)}
+
+    /* Sections */
+    section{padding:46px 0}
+    .sectionHead{
+      display:flex; justify-content:space-between; gap:18px; align-items:flex-end;
+      margin-bottom:16px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-family:var(--serif);
+      font-size: clamp(22px, 2.6vw, 34px);
+      letter-spacing:-.5px;
+    }
+    .sectionHead p{margin:0; color:var(--muted); max-width: 72ch; font-size:14px}
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    @media (max-width: 980px){ .grid3{grid-template-columns:1fr} }
+
+    .service{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(11,15,20,.02);
+      padding:16px;
+      min-height: 160px;
+    }
+    .service h3{
+      margin:0 0 8px;
       font-size:16px;
       letter-spacing:-.2px;
-      display:flex; align-items:center; gap:10px;
     }
-    .card p{margin:0 0 10px; color:var(--muted); font-size:14px}
+    .service p{margin:0 0 10px; color:var(--muted); font-size:14px}
 
     .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
     .tag{
       font-family:var(--mono);
       font-size:11px;
-      color:rgba(11,15,20,.75);
+      color:rgba(11,15,20,.78);
       border:1px solid var(--line);
-      background: rgba(255,255,255,.70);
+      background: rgba(255,255,255,.60);
       padding:6px 10px;
       border-radius:999px;
     }
 
-    /* MAIN PRODUCT STRIP */
-    .primaryOffer{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:14px;
-      align-items:stretch;
-    }
-    @media (max-width: 980px){ .primaryOffer{grid-template-columns:1fr;} }
-
-    .primaryBig{
-      background: rgba(255,255,255,.7);
-      box-shadow: 0 18px 50px rgba(0,0,0,.07);
-    }
-    .bullets{margin:10px 0 0; padding:0; list-style:none}
-    .bullets li{
-      padding:10px 0;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      font-size:14px;
-    }
-    .bullets li:first-child{border-top:none}
-    .bullets li b{color:var(--ink)}
-
-    /* SERVICES */
-    .services{
+    .two{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap:14px;
-      align-items:stretch;
     }
-    @media (max-width: 980px){ .services{grid-template-columns:1fr;} }
-
-    /* WORK */
-    .workGrid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:14px;
-      align-items:start;
-    }
-    @media (max-width: 980px){ .workGrid{grid-template-columns:1fr} }
-    .tile{
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.62);
-      overflow:hidden;
-      box-shadow: 0 18px 50px rgba(0,0,0,.08);
-    }
-    .tile .timg{border-bottom:1px solid var(--line)}
-    .tile .timg img{width:100%; display:block; object-fit:cover}
-    .tile .tbody{padding:14px 16px}
-    .tile .tbody b{display:block; font-size:14px}
-    .tile .tbody span{display:block; font-size:12px; color:var(--muted); margin-top:4px; font-family:var(--mono)}
-    .stack{display:grid; gap:14px}
-    .h320 img{height: 320px}
-    .h240 img{height: 240px}
-    .h200 img{height: 200px}
-
-    /* Ways to work */
-    .ways{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-    }
-    @media (max-width: 980px){ .ways{grid-template-columns:1fr} }
-
-    /* Approach */
-    .two{display:grid; grid-template-columns: 1fr 1fr; gap:14px; align-items:start;}
     @media (max-width: 980px){ .two{grid-template-columns:1fr} }
+
     .list{
       list-style:none; margin:0; padding:0;
       border:1px solid var(--line);
@@ -375,9 +270,30 @@
       background: rgba(11,15,20,.02);
       overflow:hidden;
     }
-    .list li{padding:14px 16px; border-top:1px solid var(--line); color:var(--muted); font-size:14px;}
+    .list li{
+      padding:14px 16px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:14px;
+    }
     .list li:first-child{border-top:none}
     .list li b{color:var(--ink)}
+
+    .quote{
+      border:1px dashed rgba(11,15,20,.25);
+      border-radius: var(--radius);
+      padding:18px;
+      background: rgba(255,255,255,.6);
+      color:rgba(11,15,20,.72);
+    }
+    .quote b{color:var(--ink)}
+    .quote .by{
+      display:block;
+      margin-top:10px;
+      font-size:12px;
+      color:var(--muted);
+      font-family:var(--mono);
+    }
 
     /* Contact */
     .contact{
@@ -386,8 +302,14 @@
       padding:18px;
       background: rgba(11,15,20,.02);
     }
-    .formGrid{display:grid; grid-template-columns: 1.2fr .8fr; gap:14px; align-items:start;}
+    .formGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+      align-items:start;
+    }
     @media (max-width: 980px){ .formGrid{grid-template-columns:1fr} }
+
     label{display:block; font-size:12px; color:var(--muted); margin-bottom:6px; font-family:var(--mono)}
     input, textarea{
       width:100%;
@@ -401,7 +323,7 @@
       outline:none;
     }
     textarea{min-height:130px; resize:vertical}
-    input:focus, textarea:focus{border-color: rgba(124,58,237,.35)}
+    input:focus, textarea:focus{border-color: rgba(11,67,255,.40)}
     .row{display:grid; grid-template-columns: 1fr 1fr; gap:10px}
     @media (max-width: 560px){ .row{grid-template-columns:1fr} }
 
@@ -411,11 +333,14 @@
       display:inline-flex; align-items:center; gap:10px;
       padding:12px 14px;
       border-radius:999px;
-      border:1px solid rgba(124,58,237,.25);
-      background: linear-gradient(135deg, rgba(124,58,237,.10), rgba(94,234,212,.10));
-      font-weight:800;
+      border:1px solid rgba(11,67,255,.28);
+      background: linear-gradient(135deg, rgba(11,67,255,.14), rgba(11,67,255,.06));
+      font-weight:850;
       font-size:13px;
     }
+    .submit:hover{border-color: rgba(11,67,255,.42)}
+    .small{font-size:12px; color:var(--muted); margin-top:10px}
+
     footer{
       border-top:1px solid var(--line);
       padding:26px 0 48px;
@@ -423,78 +348,24 @@
       font-size:12px;
       font-family:var(--mono);
     }
-    .foot{display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; align-items:center;}
-
-    /* Icons */
-    .ico{width:18px; height:18px; display:inline-block}
-    .ico svg{width:100%; height:100%}
-    .stroke svg *{stroke: currentColor; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round}
-
-    .sr{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
+    .foot{
+      display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; align-items:center;
+    }
   </style>
 </head>
 
 <body>
-  <svg class="sr" aria-hidden="true" focusable="false">
-    <defs>
-      <symbol id="mark" viewBox="0 0 64 64">
-        <path d="M32 3.5c15.74 0 28.5 12.76 28.5 28.5S47.74 60.5 32 60.5 3.5 47.74 3.5 32 16.26 3.5 32 3.5Z" fill="none" stroke="currentColor" stroke-width="2.2"/>
-        <path d="M16 42c3.2 4.2 10.5 6.4 16.8 3.7 6.4-2.8 6.4-10.6-.8-12.9l-6.9-2.2c-6.2-2-5.2-8.9.8-10.9 5.4-1.9 10.7-.4 13.6 2.4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M38 18h12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-        <path d="M38 26h10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-        <path d="M38 34h8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-        <path d="M14 50L50 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" opacity=".45"/>
-      </symbol>
-
-      <symbol id="i-learn" viewBox="0 0 24 24">
-        <path d="M3 6l9-3 9 3-9 3-9-3Z"/>
-        <path d="M21 10l-9 3-9-3"/>
-        <path d="M6 12v6c0 1 3 3 6 3s6-2 6-3v-6"/>
-      </symbol>
-      <symbol id="i-systems" viewBox="0 0 24 24">
-        <path d="M6 6h6v6H6z"/>
-        <path d="M12 12h6v6h-6z"/>
-        <path d="M12 9h3"/>
-        <path d="M9 12v3"/>
-      </symbol>
-      <symbol id="i-pen" viewBox="0 0 24 24">
-        <path d="M12 20h9"/>
-        <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/>
-      </symbol>
-      <symbol id="i-shield" viewBox="0 0 24 24">
-        <path d="M12 3l8 4v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4Z"/>
-        <path d="M9 12l2 2 4-5"/>
-      </symbol>
-      <symbol id="i-mail" viewBox="0 0 24 24">
-        <path d="M4 4h16v16H4z"/>
-        <path d="M4 7l8 6 8-6"/>
-      </symbol>
-      <symbol id="i-spark" viewBox="0 0 24 24">
-        <path d="M12 2l1.6 6.2L20 10l-6.4 1.8L12 18l-1.6-6.2L4 10l6.4-1.8Z"/>
-        <path d="M5 20l2-2"/>
-        <path d="M19 20l-2-2"/>
-      </symbol>
-    </defs>
-  </svg>
-
   <header class="topbar">
     <div class="wrap nav">
-      <a class="brand" href="#top">
-        <span class="logo" aria-hidden="true">
-          <svg viewBox="0 0 64 64" width="26" height="26" style="color: var(--ink)"><use href="#mark"></use></svg>
-        </span>
-        <span class="brandtext">
-          <span class="name">SAI FA STUDIO</span>
-          <span class="meta">Instructional Design • LMS/SMS • Online Training</span>
-        </span>
+      <a class="brand" href="#top" aria-label="STUDIO KYND home">
+        <span class="name">STUDIO KYND</span>
+        <span class="meta">Learning design • Systems • Clarity</span>
       </a>
 
       <nav class="links" aria-label="Primary navigation">
-        <a href="#primary">Main offer</a>
         <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#approach">Approach</a>
-        <a class="pill" href="#contact">Book a call</a>
+        <a href="#about">About</a>
+        <a class="pill" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -504,100 +375,50 @@
     <section class="hero">
       <div class="wrap heroGrid">
         <div>
-          <div class="kicker"><span class="kdot" aria-hidden="true"></span> Instructional design studio for complex, sensitive work</div>
+          <div class="kicker"><span class="kdot" aria-hidden="true"></span> Giving shape to learning</div>
 
-          <h1>eLearning and learning systems that actually change practice.</h1>
+          <h1>Learning experiences that turn complexity into clarity and impact.</h1>
 
           <p class="lead">
-            <b>SAI FA STUDIO</b> designs and builds <b>eLearning</b>, <b>online training</b>, and <b>LMS/SMS transitions</b> for purpose-led organisations.
-            Trauma-informed, culturally responsive, and engineered for real constraints: time, risk, compliance, and cognitive load.
+            <b>STUDIO KYND</b> designs inclusive, compliant, and adaptive learning experiences — from <b>eLearning</b> to
+            <b>ASQA-aligned training solutions</b> — shaping knowledge into learning people can actually use.
           </p>
 
           <div class="actions">
-            <a class="btn primary" href="#contact">
-              <span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-mail"/></svg></span>
-              Book a 20-minute consult
-            </a>
-            <a class="btn" href="#primary">
-              <span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-learn"/></svg></span>
-              See the main offer
-            </a>
+            <a class="btn primary" href="#services">Explore services</a>
+            <a class="btn" href="#about">About the studio</a>
+            <a class="btn" href="#contact">Get in touch</a>
           </div>
 
-          <div class="note">Melbourne-based • Australia-wide • Remote-friendly • Builds fast without losing nuance.</div>
+          <div class="note">
+            Based in Melbourne • Australia-wide • Remote-friendly • Designed for real learners, real constraints.
+          </div>
         </div>
 
-        <aside class="visual" aria-label="Studio visual">
-          <div class="visualTop">
-            <span class="chip"><span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-learn"/></svg></span> eLearning builds</span>
-            <span class="chip"><span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-systems"/></svg></span> LMS/SMS transitions</span>
-            <span class="chip"><span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></span> Trauma-informed</span>
+        <aside class="card">
+          <h3>What you get</h3>
+          <p>Not more noise. You get clarity, compliance confidence, and learning that actually lands.</p>
+
+          <div class="mini">
+            <div class="miniBox">
+              <b>Inclusive by design</b>
+              <span>Accessible, culturally aware, learner-centred.</span>
+            </div>
+            <div class="miniBox">
+              <b>Standards-ready</b>
+              <span>Clear documentation, aligned to requirements.</span>
+            </div>
+            <div class="miniBox">
+              <b>Built for outcomes</b>
+              <span>Practical, measurable, easy to use.</span>
+            </div>
           </div>
 
-          <div class="imgWrap">
-            <div class="img">
-              <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1600&q=80"
-                   alt="Workshop materials on a table" loading="lazy" />
-            </div>
-            <div class="caption">
-              <span>Built for real teams: ops + SMEs + learners</span>
-              <span>Storyboards → build → deploy → measure</span>
-            </div>
-
-            <div class="quote">
-              <b>“Safety is relational before procedural.”</b>
-              <span class="by">So learning design needs pacing, trust, and language scaffolding — not just content.</span>
-            </div>
+          <div class="quote" style="margin-top:14px">
+            <b>“Clarity is care.”</b>
+            <span class="by">A studio principle — because learning should reduce friction, not add it.</span>
           </div>
         </aside>
-      </div>
-    </section>
-
-    <!-- PRIMARY OFFER -->
-    <section id="primary">
-      <div class="wrap">
-        <div class="sectionHead">
-          <h2>Main offer</h2>
-          <p>If you only remember one thing: this studio builds learning ecosystems — from content to platform to delivery.</p>
-        </div>
-
-        <div class="primaryOffer">
-          <div class="card primaryBig">
-            <h3><span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-learn"/></svg></span> Instructional Design + Build</h3>
-            <p>End-to-end eLearning and online training production — designed for clarity, engagement and sensitive practice contexts.</p>
-            <ul class="bullets">
-              <li><b>Learning strategy</b> — outcomes, capability map, assessment approach</li>
-              <li><b>Storyboards</b> — scripts, activities, scenarios, accessibility</li>
-              <li><b>Build</b> — Articulate / SCORM / interactive modules</li>
-              <li><b>Facilitator kits</b> — run sheets, slides, workbooks, prompts</li>
-              <li><b>Evaluation</b> — feedback loops, iteration, completion + impact</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">SCORM</span>
-              <span class="tag">Blended learning</span>
-              <span class="tag">Cognitive load</span>
-              <span class="tag">Accessibility</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3><span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-systems"/></svg></span> LMS/SMS Transition + Consultancy</h3>
-            <p>Move platforms without chaos. Clean enrolment flows, automation, reporting, certificates, and learner experience.</p>
-            <ul class="bullets">
-              <li><b>Audit</b> — current workflows, pain points, data, risks</li>
-              <li><b>Migration plan</b> — timeline, roles, governance</li>
-              <li><b>Build flows</b> — enrolment, comms, waitlists, certificates</li>
-              <li><b>Templates</b> — course shells, naming, QA checklists</li>
-              <li><b>Team enablement</b> — training, SOPs, handover</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Learner journey</span>
-              <span class="tag">Automation</span>
-              <span class="tag">Reporting</span>
-              <span class="tag">Ops clarity</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -606,152 +427,92 @@
       <div class="wrap">
         <div class="sectionHead">
           <h2>Services</h2>
-          <p>Everything below supports the main product — learning that lands, and systems that hold it.</p>
+          <p>Focused learning design support — with clean deliverables and practical outcomes.</p>
         </div>
 
-        <div class="services">
-          <div class="card">
-            <h3><span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-spark"/></svg></span> Rapid Learning Sprint (2 weeks)</h3>
-            <p>When you need a decision-ready plan fast: learning outcomes, structure, prototype and build roadmap.</p>
-            <div class="tags"><span class="tag">Prototype</span><span class="tag">Scope clarity</span><span class="tag">Roadmap</span></div>
-          </div>
-
-          <div class="card">
-            <h3><span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></span> Trauma-informed Content Review</h3>
-            <p>Language, representation, harm prevention, and cultural safety checks for training in sensitive domains.</p>
-            <div class="tags"><span class="tag">Inclusive language</span><span class="tag">Risk review</span><span class="tag">Cultural safety</span></div>
-          </div>
-
-          <div class="card">
-            <h3><span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-pen"/></svg></span> Training Assets & Visual Systems</h3>
-            <p>Slides, workbooks, case studies, facilitation prompts, templates — clean, accessible and beautiful.</p>
-            <div class="tags"><span class="tag">Workbooks</span><span class="tag">Templates</span><span class="tag">Visual clarity</span></div>
-          </div>
-
-          <div class="card">
-            <h3><span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-systems"/></svg></span> Ongoing Learning Ops (Retainer)</h3>
-            <p>Monthly capacity for build, updates, reporting, QA, and continuous improvement — without hiring.</p>
-            <div class="tags"><span class="tag">Monthly cadence</span><span class="tag">Fast turnarounds</span><span class="tag">Trusted partner</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WORK -->
-    <section id="work">
-      <div class="wrap">
-        <div class="sectionHead">
-          <h2>Selected work</h2>
-          <p>Examples of what this looks like in practice (swap these for your real projects anytime).</p>
-        </div>
-
-        <div class="workGrid">
-          <div class="tile h320">
-            <div class="timg">
-              <img src="https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=1400&q=80"
-                   alt="Minimal gallery interior" loading="lazy" />
-            </div>
-            <div class="tbody">
-              <b>eLearning module series</b>
-              <span>SCORM • scenarios • accessibility • learning design system</span>
+        <div class="grid3">
+          <div class="service">
+            <h3>eLearning Design</h3>
+            <p>Engaging, accessible learning experiences tailored to real needs and outcomes.</p>
+            <div class="tags">
+              <span class="tag">Storyboards</span>
+              <span class="tag">Design + build</span>
+              <span class="tag">Accessibility</span>
             </div>
           </div>
 
-          <div class="stack">
-            <div class="tile h200">
-              <div class="timg">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80"
-                     alt="Team collaborating" loading="lazy" />
-              </div>
-              <div class="tbody">
-                <b>Online training program</b>
-                <span>Run sheets • facilitation prompts • evaluation loop</span>
-              </div>
-            </div>
-
-            <div class="tile h240">
-              <div class="timg">
-                <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80"
-                     alt="Light through window" loading="lazy" />
-              </div>
-              <div class="tbody">
-                <b>LMS/SMS transition</b>
-                <span>Enrolment flows • comms automation • reporting + certificates</span>
-              </div>
+          <div class="service">
+            <h3>LMS Reviews & Optimisation</h3>
+            <p>Audit, streamline and improve learning platforms for better learner flow and analytics.</p>
+            <div class="tags">
+              <span class="tag">Audit</span>
+              <span class="tag">Learner flow</span>
+              <span class="tag">Insights</span>
             </div>
           </div>
-        </div>
 
-        <div class="rule"></div>
-
-        <div class="workGrid">
-          <div class="quote">
-            <b>Learning is infrastructure.</b> If it’s fragile, the program becomes fragile. If it’s designed well, practice becomes safer.
-            <span class="by">SAI FA STUDIO builds training ecosystems that hold under pressure.</span>
-          </div>
-
-          <div class="tile h240">
-            <div class="timg">
-              <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1600&q=80"
-                   alt="Workshop materials" loading="lazy" />
-            </div>
-            <div class="tbody">
-              <b>Facilitator kit + workbook</b>
-              <span>Case studies • reflective tools • practice checklists</span>
+          <div class="service">
+            <h3>Compliance Training (ASQA-ready)</h3>
+            <p>Clear, inclusive training aligned with industry standards and regulations.</p>
+            <div class="tags">
+              <span class="tag">ASQA alignment</span>
+              <span class="tag">Clarity</span>
+              <span class="tag">Assessment-ready</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WAYS TO WORK -->
-    <section id="ways">
+    <!-- APPROACH (keeps your existing visual structure, but reworded to match learning) -->
+    <section id="approach" aria-label="Approach" style="padding-top:0">
       <div class="wrap">
         <div class="sectionHead">
-          <h2>Ways to work together</h2>
-          <p>Choose based on your urgency, complexity, and internal capacity.</p>
-        </div>
-
-        <div class="ways">
-          <div class="card">
-            <h3><span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-spark"/></svg></span> Project build</h3>
-            <p>End-to-end delivery for a module, a course, or a full training suite.</p>
-            <div class="tags"><span class="tag">Best for: new builds</span><span class="tag">Clear scope</span></div>
-          </div>
-          <div class="card">
-            <h3><span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-learn"/></svg></span> Sprint</h3>
-            <p>Fast clarity: structure, outcomes, prototype, roadmap, prioritisation.</p>
-            <div class="tags"><span class="tag">Best for: messy starts</span><span class="tag">Time pressure</span></div>
-          </div>
-          <div class="card">
-            <h3><span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-systems"/></svg></span> Retainer</h3>
-            <p>Ongoing build + ops support for learning systems and continuous improvement.</p>
-            <div class="tags"><span class="tag">Best for: training academies</span><span class="tag">Monthly rhythm</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- APPROACH -->
-    <section id="approach">
-      <div class="wrap">
-        <div class="sectionHead">
-          <h2>Approach</h2>
-          <p>Not just “content”. We design the whole learning journey — cognitive, emotional, and operational.</p>
+          <h2>How we work</h2>
+          <p>Rigour + kindness. Designed to reduce friction, support inclusion, and deliver outcomes.</p>
         </div>
 
         <div class="two">
           <ul class="list">
-            <li><b>1) Discover</b> — learners, constraints, risks, success measures</li>
-            <li><b>2) Design</b> — outcomes, structure, scenarios, assessment, accessibility</li>
-            <li><b>3) Build</b> — SCORM/eLearning, assets, facilitation materials</li>
-            <li><b>4) Deploy</b> — LMS/SMS setup, comms automation, reporting</li>
-            <li><b>5) Improve</b> — feedback loop, iteration, quality assurance</li>
+            <li><b>1) Diagnose</b> — learners, context, constraints, and what “good” must achieve.</li>
+            <li><b>2) Shape clarity</b> — information architecture, sequencing, cognitive load, language.</li>
+            <li><b>3) Design for inclusion</b> — accessibility, representation, trauma-aware practice where needed.</li>
+            <li><b>4) Build + test</b> — prototypes, learner feedback, iteration.</li>
+            <li><b>5) Launch + optimise</b> — analytics, refinements, and continuous improvement.</li>
           </ul>
 
           <div class="quote">
-            <b>Clarity is care.</b> Especially in training that touches trauma, culture, identity, and safety.
-            <span class="by">The goal is learning that people can carry into practice — not just “completion”.</span>
+            <b>Learning is not content.</b> It’s a pathway — shaped by systems, language, power, and time.
+            <span class="by">STUDIO KYND helps organisations turn complexity into learning that works in real life.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="sectionHead">
+          <h2>About</h2>
+          <p>Born from the belief that learning should be inclusive, adaptive, and impactful.</p>
+        </div>
+
+        <div class="two">
+          <div class="service" style="min-height:auto">
+            <h3>About STUDIO KYND</h3>
+            <p>
+              <b>STUDIO KYND</b> helps organisations turn complexity into clarity.
+              With expertise across education, vocational, corporate and community sectors, we shape knowledge into meaningful learning experiences —
+              built for real learners and real outcomes.
+            </p>
+            <p style="margin:0; color:var(--muted); font-size:14px">
+              If you want the short version: inclusive by design, standards-ready, and focused on what changes after the training ends.
+            </p>
+          </div>
+
+          <div class="quote">
+            <b>Good learning respects people.</b> It meets them where they are — and builds a path they can actually follow.
+            <span class="by">If you want learning that’s clear, compliant, and human — let’s talk.</span>
           </div>
         </div>
       </div>
@@ -761,8 +522,8 @@
     <section id="contact">
       <div class="wrap">
         <div class="sectionHead">
-          <h2>Book a call</h2>
-          <p>Send a short note. I’ll reply within 2 business days with next steps.</p>
+          <h2>Contact</h2>
+          <p>Ready to shape learning that lasts? Send a short note and we’ll connect.</p>
         </div>
 
         <div class="contact">
@@ -785,22 +546,26 @@
               </div>
 
               <div style="margin-top:10px">
-                <label for="message">What are you building?</label>
-                <textarea id="message" name="message" placeholder="eLearning module? LMS/SMS transition? Online training? Tell me what’s at stake + your timeline." required></textarea>
+                <label for="message">What do you need help with?</label>
+                <textarea id="message" name="message" placeholder="What are you building, for whom, and what outcome you need?" required></textarea>
               </div>
 
-              <button class="submit" type="submit">
-                <span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-mail"/></svg></span>
-                Send enquiry
-              </button>
+              <button class="submit" type="submit">Send enquiry</button>
+              <div class="small">
+                MVP contact opens your email app. When you’re ready, we can switch to Netlify Forms / Formspree.
+              </div>
             </form>
 
-            <aside class="card">
-              <h3><span class="ico stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-spark"/></svg></span> Quick note</h3>
-              <p>Replace the placeholder below with your real studio inbox.</p>
-              <p style="margin:0; font-family:var(--mono); font-size:13px">hello@saifa.studio</p>
-              <p style="margin-top:10px; color:var(--muted); font-size:13px">
-                If you’re not sure where to start, choose: <b>Rapid Learning Sprint (2 weeks)</b>.
+            <aside class="service" style="min-height:auto">
+              <h3>Quick note</h3>
+              <p>
+                Prefer direct email? Replace the placeholder below with your real studio inbox.
+              </p>
+              <p style="margin:0; font-family:var(--mono); font-size:13px">
+                hello@studiokynd.com
+              </p>
+              <p class="small" style="margin-top:10px">
+                Typical start: a quick diagnostic call + a scoped proposal.
               </p>
             </aside>
           </div>
@@ -811,33 +576,34 @@
 
   <footer>
     <div class="wrap foot">
-      <div style="display:flex; align-items:center; gap:10px">
-        <span style="display:grid; place-items:center; width:28px; height:28px; border-radius:12px; border:1px solid var(--line); background:rgba(11,15,20,.02)">
-          <svg viewBox="0 0 64 64" width="16" height="16" style="color: var(--ink)"><use href="#mark"></use></svg>
-        </span>
-        <span>© <span id="year"></span> SAI FA STUDIO • Melbourne, Australia</span>
-      </div>
-      <div>Instrument Serif + Inter • Minimal SVG logo + icons</div>
+      <div>© <span id="year"></span> STUDIO KYND • Melbourne, Australia</div>
+      <div>Built to ship • Iterate later</div>
     </div>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Simple mailto submit (works everywhere, easiest MVP)
     document.getElementById("contactForm").addEventListener("submit", function(e){
       e.preventDefault();
+
       const name = document.getElementById("name").value.trim();
       const email = document.getElementById("email").value.trim();
       const org = document.getElementById("org").value.trim();
       const msg = document.getElementById("message").value.trim();
 
-      const subject = encodeURIComponent("Enquiry — SAI FA STUDIO (Instructional Design)");
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nOrganisation: ${org}\n\n${msg}\n\n— sent from the website`);
+      const subject = encodeURIComponent("Enquiry — STUDIO KYND");
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nOrganisation: ${org}\n\n${msg}\n\n— sent from the STUDIO KYND website`
+      );
 
-      const to = "yourname@domain.com"; // TODO: replace
+      // TODO: replace with your real email
+      const to = "hello@studiokynd.com";
       window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     });
 
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener("click", (e)=>{
         const id = a.getAttribute("href");
@@ -852,3 +618,4 @@
   </script>
 </body>
 </html>
+
